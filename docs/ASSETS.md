@@ -95,7 +95,7 @@ O usuário informou o WhatsApp `16991544562` em 16/09/2026. Os links usam `55169
 
 ## Fotografias selecionadas
 
-As versões WebP foram criadas a partir das seleções editadas abaixo, em larguras de 640 e 1100 px, mantendo os originais intactos:
+As versões WebP foram criadas a partir das seleções editadas abaixo, em larguras de 640 e 1100 px, mantendo os originais intactos. Os nomes públicos usam o sufixo `-edited` para evitar que versões antigas permaneçam no cache do navegador ou da hospedagem:
 
 - `hero`: `editadas 1/_MG_1386.jpg`, retrato de blazer claro.
 - `maraisa`: `editadas 1/_MG_1548.jpg`, retrato próximo da consultora.

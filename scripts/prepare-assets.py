@@ -7,10 +7,10 @@ root = Path(__file__).resolve().parents[1]
 output = root / 'public' / 'assets'
 photo_dir = root / 'FOTOS PROFISSIONAIS - 10-2024'
 photos = {
-    'hero': photo_dir / 'editadas 1' / '_MG_1386.jpg',
-    'maraisa': photo_dir / 'editadas 1' / '_MG_1548.jpg',
-    'conversation': photo_dir / 'ultimas' / '_MG_1329.jpg',
-    'contact': photo_dir / 'Editadas Maraisa Fernandes' / '_MG_1574.jpg',
+    'hero-edited': photo_dir / 'editadas 1' / '_MG_1386.jpg',
+    'maraisa-edited': photo_dir / 'editadas 1' / '_MG_1548.jpg',
+    'conversation-edited': photo_dir / 'ultimas' / '_MG_1329.jpg',
+    'contact-edited': photo_dir / 'Editadas Maraisa Fernandes' / '_MG_1574.jpg',
 }
 (output / 'photos').mkdir(parents=True, exist_ok=True)
 (output / 'fonts').mkdir(parents=True, exist_ok=True)
