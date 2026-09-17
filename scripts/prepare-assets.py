@@ -5,12 +5,17 @@ import shutil
 
 root = Path(__file__).resolve().parents[1]
 output = root / 'public' / 'assets'
-photo_dir = root / 'FOTOS PROFISSIONAIS - 10-2024' / 'Editadas Maraisa Fernandes'
-photos = {'hero': '_MG_1386.jpg', 'maraisa': '_MG_1548.jpg', 'conversation': '_MG_1329.jpg', 'contact': '_MG_1574.jpg'}
+photo_dir = root / 'FOTOS PROFISSIONAIS - 10-2024'
+photos = {
+    'hero': photo_dir / 'editadas 1' / '_MG_1386.jpg',
+    'maraisa': photo_dir / 'editadas 1' / '_MG_1548.jpg',
+    'conversation': photo_dir / 'ultimas' / '_MG_1329.jpg',
+    'contact': photo_dir / 'Editadas Maraisa Fernandes' / '_MG_1574.jpg',
+}
 (output / 'photos').mkdir(parents=True, exist_ok=True)
 (output / 'fonts').mkdir(parents=True, exist_ok=True)
 for name, source in photos.items():
-    with Image.open(photo_dir / source) as original:
+    with Image.open(source) as original:
         original = ImageOps.exif_transpose(original).convert('RGB')
         for width in (640, 1100):
             photo = original.copy()

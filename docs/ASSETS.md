@@ -95,11 +95,11 @@ O usuário informou o WhatsApp `16991544562` em 16/09/2026. Os links usam `55169
 
 ## Fotografias selecionadas
 
-As versões WebP foram criadas a partir de `FOTOS PROFISSIONAIS - 10-2024/Editadas Maraisa Fernandes/`, em larguras de 640 e 1100 px, mantendo os originais intactos:
+As versões WebP foram criadas a partir das seleções editadas abaixo, em larguras de 640 e 1100 px, mantendo os originais intactos:
 
-- `hero`: `_MG_1386.jpg`, retrato de blazer claro.
-- `maraisa`: `_MG_1548.jpg`, retrato próximo da consultora.
-- `conversation`: `_MG_1329.jpg`, conversa com xícara e livro.
-- `contact`: `_MG_1574.jpg`, consultora com xícara.
+- `hero`: `editadas 1/_MG_1386.jpg`, retrato de blazer claro.
+- `maraisa`: `editadas 1/_MG_1548.jpg`, retrato próximo da consultora.
+- `conversation`: `ultimas/_MG_1329.jpg`, consultora com livro.
+- `contact`: `Editadas Maraisa Fernandes/_MG_1574.jpg`, consultora com xícara.
 
 Fontes OTF oficiais auto-hospedadas: Univia Pro Light/Regular e Grota Sans Regular/Medium.
