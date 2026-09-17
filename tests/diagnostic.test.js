@@ -29,7 +29,7 @@ test('debt follow-up appears conditionally and stale answers are removed after e
   assert.equal(state.currentId, 'review');
   assert.equal(state.answers.debt_context, undefined);
   assert.equal(getProgress(state).total, 7);
-  assert.equal(buildContactPayload(state).answers.length, 6);
+  assert.equal(Object.keys(buildContactPayload(state).answers).length, 6);
 });
 
 test('editing to add a debt requests missing follow-up before returning to review', () => {
@@ -69,7 +69,7 @@ test('invalid answers and profiles are ignored', () => {
   assert.equal(setProfile(state, 'unknown'), state);
 });
 
-test('contact payload contains only name, profile, and readable answered questions', () => {
+test('contact payload contains name, profile, and semantic answer values', () => {
   let captured;
   const state = finish('business');
   const url = getContactUrl(state, (payload) => {
@@ -80,8 +80,8 @@ test('contact payload contains only name, profile, and readable answered questio
   assert.deepEqual(Object.keys(captured), ['name', 'profile', 'answers']);
   assert.equal(captured.name, 'Ana');
   assert.equal(captured.profile, 'business');
-  assert.equal(captured.answers.length, 5);
-  assert.deepEqual(Object.keys(captured.answers[0]), ['question', 'answer']);
+  assert.equal(Object.keys(captured.answers).length, 5);
+  assert.equal(captured.answers.revenue, 'routine');
 });
 
 test('missing contact, unsafe URL, incomplete answers, and missing name do not produce a link', () => {

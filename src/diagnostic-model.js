@@ -1,4 +1,5 @@
 import { diagnosticQuestions, profiles } from './data/diagnostic-questions.js';
+import { diagnosticMessage } from './contact.js';
 
 export const createDiagnosticState = () => ({
   profile: null, answers: {}, currentId: 'profile', name: '', editing: false,
@@ -77,18 +78,13 @@ export function buildContactPayload(state) {
   if (!hasAllAnswers(state) || !state.name.trim()) return null;
   return {
     name: state.name.trim(), profile: state.profile,
-    answers: getAnswerSummary(state).map(({ question, answer }) => ({ question, answer })),
+    answers: { ...state.answers },
   };
 }
 
 export function getSummaryText(state) {
-  const profile = profiles.find((entry) => entry.value === state.profile)?.label || '';
-  return [
-    `Olá, Maraísa! Meu nome é ${state.name.trim()}.`,
-    'Gostaria de conversar sobre minha organização financeira.',
-    '', `Meu foco: ${profile}`, '',
-    ...getAnswerSummary(state).flatMap(({ question, answer }) => [question, answer, '']),
-  ].join('\n').trim();
+  const payload = buildContactPayload(state);
+  return payload ? diagnosticMessage(payload) : '';
 }
 
 export function getContactUrl(state, onContact) {
