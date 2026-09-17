@@ -28,6 +28,21 @@ npm --script-shell 'C:\Windows\System32\cmd.exe' run dev
 
 `dist/` é a entrega para hospedagem estática na raiz de um domínio. Somente os arquivos públicos entram no build; os PDFs e fotografias originais não são expostos. A publicação não foi realizada.
 
+## Deploy na Hostinger
+
+O projeto é uma aplicação Vite estática. O Node.js é necessário para instalar as dependências e gerar o build; não existe servidor, API ou middleware para manter em execução depois disso.
+
+Configuração para o deploy gerenciado por Git da Hostinger:
+
+- Framework: `Vite`
+- Node.js: `22.x`
+- Comando de instalação: `npm ci`
+- Comando de build: `npm run build`
+- Diretório de saída: `dist`
+- Arquivo de entrada do servidor: nenhum
+
+Em uma VPS administrada manualmente, gere o mesmo diretório `dist` e configure o Nginx ou o site HTML do CloudPanel para usá-lo como raiz pública. Não use `npm run preview` como servidor de produção.
+
 ## Manutenção
 
 - `index.html`: narrativa, navegação e conteúdo editorial estático, legível sem JavaScript.
